@@ -1,0 +1,153 @@
+.testimonial-form-container {
+  margin: 2rem auto 2.5rem auto;
+  max-width: 500px;
+}
+
+mat-card {
+  padding: 2rem 2rem 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(179,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+}
+
+mat-card-title, h3[mat-card-title] {
+  color: #b30000;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.star-rating-input {
+  display: flex;
+  gap: 0.3rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+}
+.star-rating-input mat-icon {
+  cursor: pointer;
+  color: #eee;
+  transition: color 0.2s;
+  user-select: none;
+  font-size: 1.8rem;
+}
+.star-rating-input mat-icon.filled {
+  color: #ffc107;
+}
+.star-rating-input mat-icon:hover,
+.star-rating-input mat-icon.filled:hover {
+  color: #ff9800;
+}
+
+.testimonial-cards-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.testimonial-card {
+  border-radius: 12px;
+  min-width: 260px;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 220px;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #b30000;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1.1rem;
+}
+
+.star-empty {
+  color: #eee;
+}
+
+blockquote {
+  font-style: italic;
+  color: #444;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.testimonial-footer {
+  font-size: 0.95rem;
+  color: #b30000;
+  font-weight: 600;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user-role {
+  color: #888;
+  font-weight: 400;
+}
+
+/* Garland positioning */
+.garland-left,
+.garland-right {
+  position: absolute;
+  top: 40px;
+  z-index: 2;
+}
+
+.garland-left {
+  left: 30px;
+}
+
+.garland-right {
+  right: 30px;
+}
+
+/* Responsive adjustments for garlands */
+@media (max-width: 900px) {
+  .garland-left,
+  .garland-right {
+    top: 20px;
+    width: 40px;
+    height: auto;
+  }
+  .garland-left {
+    left: 5px;
+    right: auto;
+  }
+  .garland-right {
+    right: 5px;
+    left: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

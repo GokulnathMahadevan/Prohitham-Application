@@ -1,0 +1,263 @@
+.home-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff0f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .welcome {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      color: #b30000;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #b30000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #8b0000;
+      }
+    }
+  }
+
+  .stats {
+    margin: 2rem 0;
+    background-color: #ffe6e6;
+    padding: 1.5rem;
+    border-radius: 12px;
+
+    h2 {
+      margin-bottom: 0.5rem;
+      color: #b30000;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #444;
+    }
+  }
+
+  .testimonial-placeholder {
+    background: #fff;
+    border: 1px dashed #ccc;
+    padding: 1rem;
+    border-radius: 12px;
+
+    h3 {
+      margin-bottom: 0.5rem;
+      color: #b30000;
+    }
+
+    p {
+      color: #666;
+    }
+  }
+}
+
+.hero-bg {
+  position: absolute;
+  top: 64px; // Adjusted to account for fixed navbar height
+  left: 0;
+  background: #fbe6b2;
+  overflow: hidden;
+}
+
+.mandala-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.garland {
+  position: absolute;
+  z-index: 1;
+}
+
+.garland-left.big-garland {
+  top: 20px;
+  left: 40px;
+  width: 120px;
+}
+.garland-left.small-garland {
+  top: 20px;
+  left: 100px;
+  width: 90px;
+}
+
+.garland-right.big-garland {
+  top: 20px;
+  right: 40px;
+  width: 120px;
+}
+.garland-right.small-garland {
+  top: 20px;
+  right: 100px;
+  width: 90px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.brand-title {
+  font-size: 5rem;
+  color: #b30000;
+  font-family: 'Pacifico', cursive, sans-serif;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  font-size: 1.3rem;
+  color: #6d3a00;
+  margin-bottom: 1.5rem;
+}
+.kalasam {
+  width: 200px !important;
+  max-width: 90vw;
+  margin: 2.5rem auto 0.5rem auto;
+  display: block;
+}
+.pooja-count {
+  font-size: 0.85rem;
+  color: #b30000;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.testimonial-section {
+  margin-top: 2rem;
+  text-align: left;
+  padding: 0 2vw;
+}
+.testimonial-section h2 {
+  color: #b30000;
+  margin-bottom: 1rem;
+}
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 220px;
+}
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.user-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #b30000;
+}
+.stars {
+  color: #ffc107;
+  font-size: 1.1rem;
+}
+.star-empty {
+  color: #eee;
+}
+blockquote {
+  font-style: italic;
+  color: #444;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+.testimonial-footer {
+  font-size: 0.95rem;
+  color: #b30000;
+  font-weight: 600;
+  display: flex;
+  gap: 0.5rem;
+}
+.user-role {
+  color: #888;
+  font-weight: 400;
+}
+
+@keyframes mild-sling {
+  0% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+  100% { transform: rotate(-8deg); }
+}
+
+.garland-left.big-garland,
+.garland-right.big-garland,
+.garland-left.small-garland,
+.garland-right.small-garland {
+  animation: mild-sling 2.5s infinite ease-in-out;
+  transform-origin: top center;
+}
+
+@media (max-width: 1200px) {
+  .garland-left.big-garland,
+  .garland-right.big-garland {
+    width: 50px;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+  }
+  .garland-left.small-garland,
+  .garland-right.small-garland {
+    width: 24px;
+    top: 120px;
+    left: 60px;
+    right: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .garland,
+  .garland-left,
+  .garland-right,
+  .big-garland,
+  .small-garland {
+    display: none;
+  }
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .kalasam {
+    width: 60px !important;
+  }
+}
+

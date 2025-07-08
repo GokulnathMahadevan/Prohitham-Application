@@ -1,0 +1,29 @@
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: #ffe6e6;
+  padding: 2rem;
+  border-radius: 12px;
+
+  h2 {
+    color: #b30000;
+  }
+
+  input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+  }
+
+  button {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+  }
+
+  p {
+    color: red;
+    margin-top: 1rem;
+  }
+}

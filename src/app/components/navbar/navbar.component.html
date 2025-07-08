@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="assets/assets/logo.svg" alt="ungaliyer logo" />
+    <span>ungaliyer</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/services">Services</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+    <li><a routerLink="/about">About</a></li>
+  </ul>
+
+  <ng-container *ngIf="isLoggedIn; else loginButton">
+    <button class="auth-btn" (click)="logout()">Logout</button>
+  </ng-container>
+
+  <ng-template #loginButton>
+    <button class="auth-btn" routerLink="/login">Login</button>
+  </ng-template>
+</nav>

@@ -1,0 +1,38 @@
+<div class="services-bg">
+  <img src="assets/assets/pattern.svg" alt="Mandala Background" class="mandala-bg">
+  <img src="assets/assets/bigFlower.svg" alt="Big Garland Left" class="garland garland-left big-garland">
+  <img src="assets/assets/smallFlower.svg" alt="Small Garland Left" class="garland garland-left small-garland">
+  <img src="assets/assets/bigFlower.svg" alt="Big Garland Right" class="garland garland-right big-garland">
+  <img src="assets/assets/smallFlower.svg" alt="Small Garland Right" class="garland garland-right small-garland">
+
+  <div class="services-content">
+    <h1 class="services-title">Our Services</h1>
+    <div class="service-paragraphs">
+      <a
+        class="service-paragraph"
+        *ngFor="let s of services; let i = index"
+        [href]="s.doc"
+        target="_self"
+        (mouseenter)="hoveredService = i"
+        (mouseleave)="hoveredService = null"
+      >
+        {{ s.name }}
+        <div
+          class="service-tooltip"
+          [ngClass]="{
+            'tooltip-right': i % 2 === 0,
+            'tooltip-left': i % 2 === 1
+          }"
+          *ngIf="hoveredService === i"
+        >
+          <strong>About:</strong> {{ s.description }}<br>
+          <strong>Why:</strong> {{ s.why }}<br>
+          <strong>Meaning:</strong> {{ s.meaning }}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- <div class="services-footer">
+  <p>For more details, please contact us at <a href="mailto: mgokulnath98@gmail.com">mgokulnath98@gmail.com</a></p>
+</div> -->

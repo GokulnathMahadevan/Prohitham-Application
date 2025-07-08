@@ -1,0 +1,127 @@
+.contact-bg {
+  position:absolute ;
+  left: 0;
+  width: 100%;
+
+  top: 64px;
+  min-height: 100vh;
+  background: #fbe6b2;
+  overflow: hidden;
+}
+
+.mandala-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.garland {
+  position: absolute;
+  top: 40px;
+  width: 80px;
+  z-index: 1;
+}
+.garland-left {
+  left: 40px;
+}
+.garland-right {
+  right: 40px;
+  transform: scaleX(-1);
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-title {
+  font-size: 3rem;
+  color: #b30000;
+  font-family: 'Pacifico', cursive, sans-serif;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(179,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  width: 90%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  border: 2px solid #ffe6e6;
+  position: relative;
+}
+
+.contact-item {
+  font-size: 1.18rem;
+  color: #6d3a00;
+  text-align: left;
+  width: 100%;
+  padding: 0.2rem 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.contact-details strong {
+  color: #b30000;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+@keyframes mild-sling {
+  0% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+  100% { transform: rotate(-8deg); }
+}
+
+.garland-left.big-garland,
+.garland-right.big-garland,
+.garland-left.small-garland,
+.garland-right.small-garland {
+  animation: mild-sling 2.5s infinite ease-in-out;
+  transform-origin: top center;
+}
+
+.garland-left.big-garland {
+  top: 20px;
+  left: 40px;
+  width: 120px;
+}
+.garland-left.small-garland {
+  top: 20px;
+  left: 100px;
+  width: 90px;
+}
+.garland-right.big-garland {
+  top: 20px;
+  right: 40px;
+  width: 120px;
+}
+.garland-right.small-garland {
+  top: 20px;
+  right: 100px;
+  width: 90px;
+}
+
+@media (max-width: 900px) {
+  .garland-left, .garland-right {
+    display: none;
+  }
+  .contact-details {
+    width: 98%;
+    padding: 1.2rem 0.5rem;
+  }
+}

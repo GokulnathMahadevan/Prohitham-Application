@@ -1,0 +1,43 @@
+<div class="testimonial-form-container">
+  <mat-card>
+    <h3 mat-card-title>Share your experience</h3>
+    <form (ngSubmit)="addTestimonial()" #testimonialForm="ngForm">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your Name</mat-label>
+        <input matInput type="text" [(ngModel)]="newTestimonial.user" name="user" required />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your Location</mat-label>
+        <input matInput type="text" [(ngModel)]="newTestimonial.location" name="location" required />
+      </mat-form-field>
+      <div class="star-rating-input">
+        <mat-icon *ngFor="let r of [1,2,3,4,5]" (mouseenter)="hoverRating = r" (mouseleave)="hoverRating = 0" (click)="setRating(r)" [ngClass]="{'filled': (hoverRating || newTestimonial.rating) >= r}">star</mat-icon>
+      </div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your Feedback</mat-label>
+        <textarea matInput [(ngModel)]="newTestimonial.feedback" name="feedback" required></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!testimonialForm.form.valid">Submit Review</button>
+    </form>
+  </mat-card>
+</div>
+
+<div class="testimonial-cards-title">
+  <h2>Customer Reviews</h2>
+</div>
+
+<div class="testimonial-cards">
+  <mat-card class="testimonial-card" *ngFor="let t of topTestimonials">
+    <div class="testimonial-header">
+      <img [src]="t.avatar" alt="User" class="user-img">
+      <span class="stars">{{ '★★★★★'.slice(0, t.rating) }}<span class="star-empty">{{ '★★★★★'.slice(t.rating) }}</span></span>
+    </div>
+    <blockquote>
+      {{ t.feedback }}
+    </blockquote>
+    <div class="testimonial-footer">
+      <span class="user-name">{{ t.user }}</span>
+      <span class="user-role">{{ t.location }}</span>
+    </div>
+  </mat-card>
+</div>

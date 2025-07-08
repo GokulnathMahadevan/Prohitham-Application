@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b30000;
+  padding: 0.8rem 2rem;
+  color: white;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    span {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #ffcccb;
+      }
+    }
+  }
+
+  .auth-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+
+    &:hover {
+      background: white;
+      color: #b30000;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.about-bg {
+  position: absolute;
+
+
+  top: 64px;
+  left: 0;
+  min-height: calc(100vh - 64px); // Ensures background covers full content
+  width: 100%;
+  background: #fbe6b2;
+  overflow: hidden;
+}
+
+.mandala-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; // Prevents horizontal overflow
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: 0; 
+  pointer-events: none;
+}
+
+.garland {
+  position: absolute;
+  z-index: 1;
+}
+
+.garland-left.big-garland {
+  top: 20px;
+  left: 40px;
+  width: 120px;
+}
+.garland-left.small-garland {
+  top: 20px;
+  left: 100px;
+  width: 90px;
+}
+.garland-right.big-garland {
+  top: 20px;
+  right: 40px;
+  width: 120px;
+}
+.garland-right.small-garland {
+  top: 20px;
+  right: 100px;
+  width: 90px;
+}
+
+@keyframes mild-sling {
+  0% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+  100% { transform: rotate(-8deg); }
+}
+
+.garland-left.big-garland,
+.garland-right.big-garland,
+.garland-left.small-garland,
+.garland-right.small-garland {
+  animation: mild-sling 2.5s infinite ease-in-out;
+  transform-origin: top center;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 40px;
+}
+.brand-title {
+  font-size: 5rem;
+  color: #b30000;
+  font-family: 'Pacifico', cursive, sans-serif;
+  margin-bottom: 0.5rem;
+}
