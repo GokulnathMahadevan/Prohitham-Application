@@ -3,16 +3,18 @@
   justify-content: space-between;
   align-items: center;
   background-color: #b30000;
-  padding: 0.8rem 2rem;
+  padding-left: 10px;
+  padding-right: 10px;
   color: white;
 
   .logo {
     display: flex;
     align-items: center;
+    
 
     img {
-      height: 32px;
       margin-right: 8px;
+      width: 100px;
     }
 
     span {

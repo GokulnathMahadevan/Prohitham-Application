@@ -22,17 +22,18 @@
   z-index: 0;
 }
 
+
 .garland {
   position: absolute;
-  top: 40px;
   width: 80px;
   z-index: 1;
 }
 .garland-left {
+  top: 0px;
+  right:0px;
   left: 40px;
 }
 .garland-right {
-  right: 40px;
   transform: scaleX(-1);
 }
 
@@ -41,6 +42,7 @@
   z-index: 2;
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .services-title {
@@ -72,6 +74,7 @@
   cursor: pointer;
   text-decoration: none;
   display: block;
+  
 }
 
 .service-tooltip {
@@ -100,7 +103,7 @@
 }
 
 .service-paragraph:hover {
-  animation: blink 0.7s linear infinite alternate;
+  // animation: blink 0.7s linear infinite alternate;
   background: #ffe6e6;
   color: #b30000;
   box-shadow: 0 0 10px #b3000033;
@@ -130,24 +133,24 @@
 }
 
 .garland-left.big-garland {
-  top: 20px;
-  left: 40px;
+  top: -5px;
+  left: 80px;
   width: 120px;
 }
 .garland-left.small-garland {
-  top: 20px;
-  left: 100px;
-  width: 90px;
+  top: -20px;
+  left: 140px;
+  width: 110px;
 }
 .garland-right.big-garland {
-  top: 20px;
-  right: 40px;
+  top: -5px;
+  right: 80px;
   width: 120px;
 }
 .garland-right.small-garland {
-  top: 20px;
-  right: 100px;
-  width: 90px;
+  top: -20px;
+  right: 140px;
+  width: 110px;
 }
 
 @media (max-width: 900px) {

@@ -17,8 +17,8 @@ import { Testimonial } from './testimonial.model';
 export class TestimonialsComponent {
   testimonials: Testimonial[] = [
     {
-      user: 'Stalin',
-      location: 'Chennai',
+      user: 'Shanmugaraj',
+      location: 'Ellupanatham',
       rating: 5,
       feedback: 'Excellent service! Very professional and traditional.',
       avatar: 'assets/assets/1.svg'

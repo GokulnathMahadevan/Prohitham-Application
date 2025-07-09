@@ -87,34 +87,35 @@
   object-fit: cover;
   opacity: 0.25;
   z-index: 0;
-  pointer-events: none;
+  // pointer-events: none;
 }
 
 .garland {
   position: absolute;
+  width: 80px;
   z-index: 1;
 }
 
 .garland-left.big-garland {
-  top: 20px;
-  left: 40px;
+  top: -5px;
+  left: 80px;
   width: 120px;
 }
 .garland-left.small-garland {
-  top: 20px;
-  left: 100px;
-  width: 90px;
+   top: -20px;
+  left: 140px;
+  width: 110px;
 }
 
 .garland-right.big-garland {
-  top: 20px;
-  right: 40px;
+  top: -5px;
+  right: 80px;
   width: 120px;
 }
 .garland-right.small-garland {
-  top: 20px;
-  right: 100px;
-  width: 90px;
+  top: -20px;
+  right: 140px;
+  width: 110px;
 }
 
 .hero-content {
@@ -134,19 +135,6 @@
   font-size: 1.3rem;
   color: #6d3a00;
   margin-bottom: 1.5rem;
-}
-.kalasam {
-  width: 200px !important;
-  max-width: 90vw;
-  margin: 2.5rem auto 0.5rem auto;
-  display: block;
-}
-.pooja-count {
-  font-size: 0.85rem;
-  color: #b30000;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  letter-spacing: 0.5px;
 }
 
 .testimonial-section {
@@ -227,22 +215,22 @@ blockquote {
   transform-origin: top center;
 }
 
-@media (max-width: 1200px) {
-  .garland-left.big-garland,
-  .garland-right.big-garland {
-    width: 50px;
-    top: 40px;
-    left: 20px;
-    right: 20px;
-  }
-  .garland-left.small-garland,
-  .garland-right.small-garland {
-    width: 24px;
-    top: 120px;
-    left: 60px;
-    right: 60px;
-  }
-}
+// @media (max-width: 1200px) {
+//   .garland-left.big-garland,
+//   .garland-right.big-garland {
+//     width: 50px;
+//     top: 40px;
+//     left: 20px;
+//     right: 20px;
+//   }
+//   .garland-left.small-garland,
+//   .garland-right.small-garland {
+//     width: 24px;
+//     top: 120px;
+//     left: 60px;
+//     right: 60px;
+//   }
+// }
 
 @media (max-width: 900px) {
   .garland,
@@ -260,4 +248,40 @@ blockquote {
     width: 60px !important;
   }
 }
+.pooja-visuals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 2.5rem auto;
 
+  .kalasam-block,
+  .fire-block {
+    text-align: center;
+  }
+
+  .kalasam {
+    width: 200px;
+    max-width: 90vw;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+  }
+
+  .fire-icon {
+    width: 200px;
+    top: -10px;
+    height: 133.3px;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+    object-fit: contain;
+  }
+
+  .pooja-count,
+  .pooja-count2 {
+    font-size: 0.85rem;
+    color: #b30000;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+  }
+}
